@@ -1,22 +1,22 @@
-def get_user_number():
-    num = int(input("Please enter a number: "))
+def my_int(x) throws ValueError, IoException, SqlException:
+    # all of the code
+    # that does `int`
+    int(x)
+
+def get_user_number() throws ValueError, IoException, SqlException:
+    num = my_int(input("Please enter a number: "))
     return num
 
-def helper1():
+def helper1() throws ValueError, IoException, SqlException:
     return get_user_number()
 
 def gives_value():
     return None
 
-def helper2():
-    x = gives_value()
-
-    try:
-        y = x + 5
-    except TypeError:
-        pass
-
+def helper2() throws ValueError, IoException, SqlException:
     return helper1()
+
+
 
 def helper3():
     while True:
@@ -26,6 +26,8 @@ def helper3():
         except ValueError as err:
             print("That's not a number!")
             print(f"The error was: {err}")
+        except IoException:
+            pass
 
 num = helper3()
 

@@ -2,6 +2,14 @@ fn string_chars_len(string: &String) -> usize {
     string.chars().count()
 }
 
+
+
+
+
+
+
+
+
 #[cfg(test)]
 mod tests {
     use super::string_chars_len;

@@ -5,7 +5,7 @@ mod traits;
 mod iter;
 
 fn main() {
-    type_parameters::main();
+    // type_parameters::main();
     // traits::main();
-    // iter::main();
+    iter::main();
 }

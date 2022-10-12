@@ -1,34 +1,67 @@
 pub fn main() {
-    // println!("The first ten terms of the Fibonacci sequence are: ");
-    // for i in fibonacci().take(10) {
-    //     println!("{}", i);
-    // }
+    println!("The first ten terms of the Fibonacci sequence are: ");
+    for line in fibonacci().take(10) {
+        println!("{}", line);
+    }
 
-    // let my_vec = vec![1, 2, 3, 4, 5];
-    // for item in my_vec_iter(&my_vec) {
-    //     println!("{item}");
-    // }
+    let my_vec = vec![
+        String::from("Dong"),
+        String::from("Simon"),
+        String::from("Miguel"),
+    ];
+    for item in my_vec_iter(&my_vec) {
+        println!("{item}");
+    }
 }
 
 struct Fibonacci {
-
+    curr: u32,
+    next: u32,
 }
 
 fn fibonacci() -> Fibonacci {
-    todo!()
+    Fibonacci {
+        curr: 1,
+        next: 1,
+    }
+}
+
+impl Iterator for Fibonacci {
+    type Item = u32;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        let curr = self.curr;
+        let next_should_be = self.curr + self.next;
+
+        self.curr = self.next;
+        self.next = next_should_be;
+
+        Some(curr)
+    }
 }
 
 
 
-
-
-struct VecIter {
-    // TODO
+struct VecIter<'a, T> {
+    vec: &'a Vec<T>,
+    index: usize,
 }
 
-fn my_vec_iter<T>(vec: &Vec<T>) -> VecIter {
-    todo!()
+fn my_vec_iter<'a, T>(vec: &'a Vec<T>) -> VecIter<'a, T> {
+    VecIter {
+        vec: vec,
+        index: 0,
+    }
 }
 
-// TODO: impl Iterator for VecIter
+impl<'a, T> Iterator for VecIter<'a, T> {
+    type Item = &'a T;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        let item = self.vec.get(self.index)?;
+        self.index += 1;
+
+        Some(item)
+    }
+}
 

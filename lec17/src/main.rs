@@ -34,14 +34,18 @@ impl Future for WebsiteRequest {
         match self.deref() {
             &WebsiteRequest::Init(url) => {
                 let (sender, receiver) = mpsc::channel();
-                std::thread::spawn(move || {
-                    let response = reqwest::blocking::get(url) // PART 2
-                        .unwrap() // PART 3 (END)
-                        .text()
-                        .unwrap();
+                {
+                    let waker = cx.waker().clone();
+                    std::thread::spawn(move || {
+                        let response = reqwest::blocking::get(url) // PART 2
+                            .unwrap() // PART 3 (END)
+                            .text()
+                            .unwrap();
 
-                    sender.send(response).unwrap();
-                });
+                        sender.send(response).unwrap();
+                        waker.wake();
+                    });
+                }
 
                 *self = Self::SentRequest(receiver);
                 

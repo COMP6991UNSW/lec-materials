@@ -1,0 +1,12 @@
+[package]
+name = "lec18"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+serde = { version = "1.0.147", features = ["serde_derive"] }
+tokio = "1.21.2"
+uuid = { version = "1.2.2", features = ["v4"] }

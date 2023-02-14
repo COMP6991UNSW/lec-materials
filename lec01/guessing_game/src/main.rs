@@ -10,12 +10,27 @@ fn main() {
     let secret_number: i32 = rand::thread_rng().gen_range(1..=100);
 
     loop {
-        let mut guess = String::new();
+        let guess = loop {
+            let mut guess_line = String::new();
 
-        stdin().read_line(&mut guess)
-            .expect("Failed to read the guess");
+            match stdin().read_line(&mut guess_line) {
+                Ok(_) => {}
+                Err(_) => {
+                    println!("Bad input!");
+                    continue;
+                }
+            }
 
-        let guess: i32 = guess.trim().parse().expect("Guess is not a number");
+            let guess_number: i32 = match guess_line.trim().parse() {
+                Ok(parsed) => parsed,
+                Err(_) => {
+                    println!("It needs to be a number!!!");
+                    continue;
+                }
+            };
+
+            break guess_number;
+        };
 
         println!("You guessed: {guess}");
 

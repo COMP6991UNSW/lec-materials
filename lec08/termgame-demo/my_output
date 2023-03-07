@@ -1,0 +1,19 @@
+warning: unused variable: `game`
+  --> src/main.rs:40:28
+   |
+40 |     fn on_event(&mut self, game: &mut Game, event: GameEvent) {
+   |                            ^^^^ help: if this is intentional, prefix it with an underscore: `_game`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `event`
+  --> src/main.rs:40:45
+   |
+40 |     fn on_event(&mut self, game: &mut Game, event: GameEvent) {
+   |                                             ^^^^^ help: if this is intentional, prefix it with an underscore: `_event`
+
+warning: `termgame-demo` (bin "termgame-demo") generated 2 warnings
+    Finished dev [unoptimized + debuginfo] target(s) in 0.01s
+     Running `target/debug/termgame-demo`
+[src/main.rs:17] self.image.get_width() = 200
+[src/main.rs:17] self.image.get_height() = 200

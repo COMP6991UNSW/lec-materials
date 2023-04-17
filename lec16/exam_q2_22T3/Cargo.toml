@@ -1,0 +1,20 @@
+[package]
+name = "exam_q2_22T3"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+path = "src/main.rs"
+name = "exam_q2"
+
+[[bin]]
+path = "src/main_alt.rs"
+name = "exam_q2_alt"
+
+[lib]
+path = "src/lib.rs"
+name = "exam_q2_lib"
+
+[dependencies]

@@ -1,0 +1,15 @@
+Rust is strict in many ways, but it ensure more safety.
+
+In some instances rust may be too strict, and another language like C may be more useful.
+Rust allows this option, with things like unsafe and FFI to call C functions.
+
+Rust does have  higher learning curve, which is a disadvantage.
+It is not the best choice in all circumstances, and considerations like knowledge of
+programmers in a company, how safe they usually write there code, if there are strong
+formal methods to check code etc may be a good reason to use another language.
+
+In circumstance where there is knowledge of rust and the need for very safe or concurrent code
+rust may be a good option.
+
+Learning rust also re-enforces safety things in other code, which is an advantage.
+

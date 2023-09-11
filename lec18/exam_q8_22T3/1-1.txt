@@ -1,4 +1,0 @@
-- Rust's strictness ensures safety by design.
-- Rust's strictness reduces the potential for programmer error.
-- Rust's strictness means that there is a larger learning curve, yes, but reduces the pain of debugging subtle bugs
-

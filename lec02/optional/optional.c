@@ -15,14 +15,16 @@ char *create(bool b) {
 int main(void) {
 	// method 1
 	char *create_true = create(true);
-	if (create_true != NULL) {
+	if (create_true) {
 		printf("create(true) returned %s\n", create_true);
+	} else {
+		printf("create(true) returned <empty>\n");
 	}
 
 	// method 2
 	char *create_false = create(false);
 	printf(
 		"create(false) returned %s\n",
-		create_false != NULL ? create_false : "<empty>"
+		create_false ? create_false : "<empty>"
 	);
 }

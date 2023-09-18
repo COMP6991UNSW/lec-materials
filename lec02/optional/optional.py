@@ -9,14 +9,14 @@ def create(b):
 def main():
     # Method 1
     create_true = create(True)
-    if create_true:
+    if create_true is not None:
         print("create(True) returned " + create_true)
 
     # Method 2
     create_false = create(False)
     print(
         "create(False) returned "
-        + create_false if create_false else "<empty>"
+        + create_false if create_false is not None else "<empty>"
     )
 
 if __name__ == "__main__":

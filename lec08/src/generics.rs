@@ -42,6 +42,10 @@ pub fn main() {
 
     dbg!(smallest(set));
 
+    print_all(&[1, 2, 3, 4, 5]);
+    print_all(&["foo", "bar", "baz"]);
+    // print_all(&[1, "bar", 2, "baz"]);
+
     // dbg!(smallest([1, 5, 3.2, 'z', student1]));
     // dbg!(smallest_two(File::open("foo"), File::open("bar")));
 }
@@ -89,6 +93,15 @@ impl<T> MyVec<T> {
 
 
 // Monomorphization
+
+fn print_all<T>(ts: &[T])
+where
+    T: ToString,
+{
+    for t in ts {
+        println!("{}", t.to_string());
+    }
+}
 
 fn smallest<I, T>(ts: I) -> Option<T>
 where

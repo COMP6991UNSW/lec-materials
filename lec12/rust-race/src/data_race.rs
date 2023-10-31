@@ -83,7 +83,7 @@ pub mod attempt2 {
 
 #[cfg(any())]
 pub mod attempt3 {
-    use std::{array, cell::Cell};
+    use std::{array, cell::Cell, thread};
 
     use super::*;
 
@@ -96,14 +96,11 @@ pub mod attempt3 {
     pub fn main() {
         let my_number = Cell::new(0);
 
-        let mut threads: [_; N_THREADS] = array::from_fn(|_| None);
-
-        for i in 0..N_THREADS {
-            threads[i] = Some(std::thread::spawn(|| thread(&my_number)));
-        }
-        for i in 0..N_THREADS {
-            threads[i].take().unwrap().join();
-        }
+        thread::scope(|scope| {
+            for i in 0..N_THREADS {
+                scope.spawn(|| thread(&my_number));
+            }
+        });
 
         println!("Final total: {} (expected {})\n", my_number.get(), N_THREADS * N_INCREMENTS);
     }
@@ -121,9 +118,9 @@ pub mod attempt3 {
 
 
 
-#[cfg(any())]
+#[cfg(all())]
 pub mod attempt4 {
-    use std::{array, cell::Cell, sync::{atomic::{AtomicU64, Ordering}, Mutex}};
+    use std::{thread, array, cell::Cell, sync::{atomic::{AtomicU64, Ordering}, Mutex}};
 
     use super::*;
 
@@ -135,14 +132,12 @@ pub mod attempt4 {
 
     pub fn main() {
         let my_number: Mutex<u64> = Mutex::new(0);
-        let mut threads: [_; N_THREADS] = array::from_fn(|_| None);
 
-        for i in 0..N_THREADS {
-            threads[i] = Some(std::thread::spawn(|| thread(&my_number)));
-        }
-        for i in 0..N_THREADS {
-            threads[i].take().unwrap().join();
-        }
+        thread::scope(|scope| {
+            for i in 0..N_THREADS {
+                scope.spawn(|| thread(&my_number));
+            }
+        });
 
         println!("Final total: {} (expected {})\n", *my_number.lock().unwrap(), N_THREADS * N_INCREMENTS);
     }
@@ -160,7 +155,7 @@ pub mod attempt4 {
 
 
 
-#[cfg(any())]
+#[cfg(all())]
 pub mod attempt4fix1 {
     use std::{array, cell::Cell, sync::{atomic::{AtomicU64, Ordering}, Mutex, Arc}};
 
@@ -200,7 +195,7 @@ pub mod attempt4fix1 {
 
 
 
-#[cfg(any())]
+#[cfg(all())]
 pub mod attempt4fix2 {
     use std::{thread, array, cell::Cell, sync::{atomic::{AtomicU64, Ordering}, Mutex, Arc}};
 
@@ -237,7 +232,7 @@ pub mod attempt4fix2 {
 
 
 
-#[cfg(any())]
+#[cfg(all())]
 pub mod attempt5 {
     use std::{array, cell::Cell, sync::atomic::{AtomicU64, Ordering}};
 

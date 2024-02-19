@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 // Product type
 struct Student {
     name: String,
@@ -29,9 +31,74 @@ struct Foo {
 const MY_SPECIAL_NUMBER: i32 = 42;
 
 fn main() {
+    let my_option: Option<i32> = Some(42);
+    let my_option: Option<i32> = None;
+
+    let x = 42;
+    let y = 123;
+    
+    let (x, y) = (y, x);
+
+    // match 42 {
+    //     0 => todo!(),
+    //     1 => todo!(),
+    //     2 => todo!(),
+    //     3 => todo!(),
+    //     _ => todo!(),
+    // }
+
+    let expression_value = match my_option {
+        Some(value) => {
+            println!("The value is {value}");
+
+            value
+        }
+        Some(42) => {
+            println!("42!");
+
+            42
+        }
+        hello => {
+            println!("Value = {hello:?}");
+
+            999
+        }
+    };
+
+    if my_option.is_some() {
+        let value = my_option.unwrap();
+    }
+
+    println!("{expression_value}");
+
+    if let Some(value) = my_option {
+        println!("The value exists, and it is {value}");
+    }
+
+
+    let my_result: Result<i32, String> = Err(String::from("oh no!"));
+    match my_result {
+        Ok(number) => {
+            println!("Ok! The number is {number}");
+        }
+        Err(message) => {
+            println!("Err! The message is {message}");
+        }
+    }
+
+    if true { return }
+
+
     let brand: CarBrand = CarBrand::Toyota(None);
     let brand: CarBrand = CarBrand::Nissan(String::from("hello"));
     let brand: CarBrand = CarBrand::Subaru;
+
+    match brand {
+        CarBrand::Toyota(Some(number)) => todo!(),
+        CarBrand::Toyota(None) => todo!(),
+        CarBrand::Nissan(string) => todo!(),
+        CarBrand::Subaru => todo!(),
+    }
 
     let mut my_array = [
         1,

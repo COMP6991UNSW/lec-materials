@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Simple example metaprogram
+
+echo '#!/bin/sh' > program	# insert shebang into program
+
+for i in $(seq 10); do
+    echo "echo $i" >> program	# insert code into program
+done
+
+chmod +x program		# make program executable

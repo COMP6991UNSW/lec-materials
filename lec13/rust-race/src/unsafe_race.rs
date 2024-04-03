@@ -10,6 +10,8 @@ static mut MY_NUMBER: u64 = 0;
 
 fn thread() {
     for _ in 0..N_INCREMENTS {
+        // Safety: This is exactly why what I'm doing here
+        // is safe in ALL contexts ...
         unsafe { MY_NUMBER += 1 };
     }
 }

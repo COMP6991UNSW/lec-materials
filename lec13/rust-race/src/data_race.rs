@@ -44,9 +44,9 @@ pub mod attempt1 {
 
 
 
-#[cfg(all())]
+#[cfg(any())]
 pub mod attempt2 {
-    use std::array;
+    use std::{array, rc::Rc, sync::Arc, thread};
 
     use super::*;
 
@@ -56,17 +56,42 @@ pub mod attempt2 {
         }
     }
 
+    // The thread might outlive the data
+    //      Arc<...>
+    //
+    // Or
+    //
+    // The thread doesn't outlive the data,
+    // but Rust doens't realise that
+    //      thread::scope
+
+    fn foo() {
+        let x = Arc::new(42);
+        let borrow = x.clone();
+
+        thread::spawn(|| {
+            let capture = borrow;
+            
+            loop {
+
+            }
+        });
+
+        drop(x);
+    }
+
     pub fn main() {
         let mut my_number = 0;
 
         let mut threads = [EMPTY_JOIN_HANDLE; N_THREADS];
 
-        for i in 0..N_THREADS {
-            threads[i] = Some(std::thread::spawn(|| thread(&mut my_number)));
-        }
-        for i in 0..N_THREADS {
-            threads[i].take().unwrap().join();
-        }
+        thread::scope(|scope| {
+            for _ in 0..N_THREADS {
+                scope.spawn(|| {
+                    thread(&mut my_number);
+                });
+            }
+        });
 
         println!("Final total: {my_number} (expected {})\n", N_THREADS * N_INCREMENTS);
     }

@@ -1,0 +1,46 @@
+The discussion and debate around the gradual conversion of existing code to a new "profiles" system or the adoption of Rust
+required to examine the following key points and arguments from Stroustrup's perspective.
+
+One of the major arguments for the new profile system is the existing large legacy code bases that are written in C++.
+(Major composition of the modern-day tech infrastructure). Implementing a profile system significantly reduces the cost
+and effort (you don't need to translate the whole database into another language) and is more practical. (Also respective the investment
+of effort and learning of programmers toward C++, and avoid the need of time investment to learn the feature and system
+of Rust, by providing safety guidelines in new profile system compared to enforce most of the safety in Rust, it requires the programmers
+to consider and plan the safety of the software carefully, allowing them to understand the safety code practices concepts better.)
+Interoperating or translating C++ code to Rust also faces technical challenges, where certain features can not be implemented
+or implemented efficiently in Rust from C++.
+
+Also, the new profile system mitigates the risks and dangers of coding in C++ code while maintaining its power of efficiency and
+flexibility in manipulating unsafe code. Although this static analysis can only ensure the safety of the program to a certain
+extent, it provides flexibility between the safety concerns of the program as well as the efficiency of the program.
+(Since the profile system requires less comprehensive static check, it is more efficient to compile and check compared to Rust)
+
+On the other hand, Rust offers safety measures on a broad scope of potential errors covered by Stroustrup's perspective, including
+but not limited to memory safety, concurrency, and error handling(detected at complile time). Such features of Rust can offer
+higher safety insurance compared to the new profile system based on C++, which still has various inherent problems related to
+memory and concurrency inherent within the language of C++.
+
+Although the learning and adaptation of Rust might be a steep curve, the initial investment would ensure that the code base is
+more robust and significantly less prone to error in the long term compared to C++. (Since there are fewer legacy issues
+inherently within the language), reduce time efforts spent on testing and fixing errors. Also, Stroustrup states that "A lot
+of the so-called 'safe' languages outsource all the low-level stuff to C or C++"
+but in this case, Rust does not outsource its low-level computations and programming to C or C++, which avoids the inherent unsafety
+of C or C++.
+
+The statement "This idea of just building a new system over on the side, without any of the problems of the old one, is a
+fantasy. But it's a very popular fantasy." proposed by Stroustrup is only true to a certain extent. Although Rust may not solve
+all problems within C++, it provides a more robust and safer environment that solves some major safety issues
+in C++ (Such as memory error and concurrency management).
+
+In addtion, there is a significant momentum in growing community of Rust, where significant portion of industry code are
+written in Rust (such as code for quant trading firm). Such rapidly developing ecosystem can propell rust to push new feature
+and iterate on the currectn design, which makes Rust more robust and flexible in the future.
+
+Hence, from these key points, the new "profile" system is more suited for large existing code bases written in C++,
+which would not be practical to translate into Rust due to its immense cost and complexity. (Offer an additional layer of safety
+without disrupting the current flow of the ecosystem). In a new or minimal project, Rust is a compelling choice that
+provides a more comprehensive, safe measure of the code over the long term and reduces potential maintenance in the long run.
+
+In conclusion, the new profile system is a compelling alternative to Rust in large code bases, or project requiring balance
+between safety and performance, but Rust is a more holistic solution when building a new project with safety as a core principle.
+

@@ -1,0 +1,25 @@
+The profiles which Stroustrup is describing in his keynote is in many ways, similar to the current principles and rules of Rust, to have strict and enforced rules.
+
+Let's start by discussing the advantages and disadvantages of Rust before diving into the viability of widespread adoption.
+Through its extensive ownership system, Rust ensures that it the code produced is extremely safe in terms of types, concurrency and paralleism.
+However, it can be a a bit of a steep learning curve to learn all the new rules and terms which come with this language.
+Additionally, to write even the most simple rust code can be relatively cumbersome due to it's extremely level of safety.
+Users who are coming from higher level languages such as JS and Python will have a difficult time adjusting to all the declarations and annotations which are required.
+
+C++ on the other hand is a language which is much more familiar to most developers, having been around for a while.
+It has a lot of flexibility by allowing the user to have close control over memory management but that also comes with a drawback in that it is much more unsafe.
+
+So in short, C++ chooses to give more control to the user at the cost of safety, while Rust chooses to give more safety at the cost of control.
+
+So which one is more viable for widespread adoption?
+In my opinion, that truly depends on the use case. Critical systems in the medical field, aviation, and space exploration should be written in Rust.
+There have been too many horror stories where a simple bug in the C++ code has caused catestrphic failures and I think Rust will serve these industries well by providing highly safe code with lower chances of failures due to bugs.
+
+On the flip side, C++ ought to be the language of choice for most non-critical systems. Due to it's versatility, it can often be used to optimise performance and memory usage more easily that Rust.
+
+In an idea world, widespread adoption of Rust would be optimal, ensuring that both critical and non-critical systems are safe and secure.
+However, realistically, C++ will likely be the language of choice due to it's versatility.
+
+To conclude, I think that there is definitely a time and a place for Rust. When you need things to go right and can't afford to make mistakes, I think rust is the solution.
+But just like how you wouldn't use a sledgehammer to crack a nut, Rust is not the solution for every problem. That's why I think the gradual conversion to 'profiles' may be a more
+compelling solution for the moment, while the programming community slowly adapts to Rust which is still a relatively new language.

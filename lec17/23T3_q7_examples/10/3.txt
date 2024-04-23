@@ -1,0 +1,44 @@
+Gradual conversion of existing code to a new "profiles" system is a compelling alternative to widespread adoption of Rust.
+
+- Looking at what Stroustrup has envisioned with profiles is definitely exiciting for current users of
+C++ and legacy programs that are still built upon its infrastructure. One of his key points is that
+“Gradual conversion from older code to modern code offering guarantees is supported." which I believe
+to be the goal, integrating backwards compatibility with existing C++ programs, that is to say the
+target audience are current users of C++ which would alleviate the costs and time associated with
+completely uprooting their core systems in favour for other alternatives such as Rust which
+offer these guarantees as a safe language.
+
+- As an alternative, Rust has definitely shown itself to be very useful IF the checks and what it guarantees
+are what you are looking for and many of the common problems that Stroustrup has listed in "uninitialized variables, range errors,
+null pointer dereferencing, resource leaks, and dangling references." has already been figured out in safe Rust.
+Considering that there is no indication of WHEN exactly these C++ profile system will come in place,
+people may not want to stick around and keep using C++ with the idea that these systems will exist eventually
+when they need these guarantees now.
+
+- If C++ does indeed implement these profile systems though, he does have a point with “A lot of the so-called
+‘safe’ languages outsource all the low-level stuff to C or C++,” where rather than code in both languages
+through unsafe rust and FFI, it would be much more efficient through the use of profiles with the same guarantees
+of memory safety as rust to just code in C++. Though this does make Rust look not as attractive as an alternative
+as it was built around these issues through rigorous type safety checking with its ownership and borrowing model,
+it bolsters the notion of Rust being much safer as with the usage of unsafe with FFI, there are a lot of guarantees
+that must be upheld which C++ can not hold to the same degree as well as having Rust create a much
+smaller scope for these issues to arise through unsafe implementation under safe abstraction and does not mean
+they can not live in conjuction with each other if they both have things that one needs.
+
+- Another issue with these profiles, is the implementation of it. Considering that C++ has a heavy emphasis placed
+on backwards compatibility, how exactly these profiles work would be a very big point of contention. He states that
+" there will also be rules for applying different guarantees to different fragments of code", but
+is that not counter intuitive? If this was true, could people simply not just bypass these guarantees, especially since
+he himself also states that “Being careful” doesn’t scale." which all seems to makes me believe that
+his vision of safety in C++ will be at best similiar to that of unsafe in Rust which already exists except inversed.
+If the rest of the code is unsafe with only specific sections of code being "safe", these errors will still exist
+at a larger scale than compared to rust and as a result,there is a possibility that most of this existing code
+will not even move to this profiles system.
+
+Overall, though Stroustrup does bring a compelling idea for the future of C++, it will probably be a long time before
+this profile system can be implemented where existing code, especially those that are very costly and integral
+may not want to convert to other languages such as Rust. But, Rust currently exists, and for those looking
+for these "profiles" system early, Rust would be the much better suited to their tasks. Also,
+Rust is constantly updated as well and not held to the same backwards compatibility as C++ which may
+mean in the future Rust could become a much BETTER alternative to C++. If in the future it
+is implemented though, it could prove to be very beneficial to the existing codebases.

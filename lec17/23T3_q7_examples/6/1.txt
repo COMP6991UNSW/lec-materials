@@ -1,0 +1,29 @@
+The statement of "Gradual conversion of existing code to a new "profiles" system
+is a compelling alternative to widespread adoption of Rust' worth some careful consideration.
+
+We all know the potential destruction of many types of errors (memory error, range error. etc)
+that they can pose upon the real world. That is the main reason there are many substitutes for C/C++.
+
+The profile concept raised by Stroustrup is a good idea. It attempts to introduce some new sets of rules.
+When people and code follow these rules, all the previous mentioned error would be eliminated.
+And he also acknowledges the reality, hence he introduces the idea that gradual conversion,
+with local rules first, and focusing on the static analysis to eliminate errors.
+The idea is great, however, it is not easy to implement.
+
+When the code and repository gets bigger and bigger, it would be hard to enforce all the participants,
+as well as all the codes to follow the rules. Some breaching may be unintentional, but some may be
+intentional, due to the strict deadline etc. And when people are tired to follow the rules,
+they may consider some alternatives. For example, the TypeScript is built upon the JavaScript,
+with type checking to improve the original JavaScript syntax and other features.
+However, we do see a trend in these months that some tech leaders are trying to move away from the TypeScript.
+
+As a result, the profile concept is worths trying, but it will still take a long time for the general public to accept,
+and indeed, we can forsee there will be some compromise during its development.
+
+On the other hand, Rust mainly focuses on the memory safety and concurrency, making it a good alternative
+for the C and C++. We even see that Rust code is now merged into the operating systems, such as Linux and Windows.
+These news stands for Rust's success. Instead of building a new profile system, it would be more effective to
+focusing on the intersection of the Rust and the profile system. Modern languages are not built from zero,
+and during the evolution, languages are constantly absorbing new features and good concepts to make them stronger.
+Hence, in my opinion, it is more worth to get the new profile system working with the Rust instead of creating another system
+from scratch.

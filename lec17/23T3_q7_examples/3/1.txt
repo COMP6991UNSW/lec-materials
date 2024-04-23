@@ -1,0 +1,8 @@
+In this presentation, Stroustrup made a different claim than the designers of languages I've seen before,
+he doesn't claim to purify everything with flames (OCaml), but rather, he is closer to the actual engineers
+and practical project considerations, and starts from compatibility with the underlying language to find the
+balance of his own system of rules, with unchanging fixed rules (mainly for the static analyses of achievable parts)
+to deal with the challenges in a variety of real-world projects, and broadly compatible with the current underlying project
+has been converted (Linux kernel proved this choice), through a set of limited rules he can achieve the security requirements
+of his goals, and eliminate potential errors, has been able to save a lot of time and
+management of modern projects, and in the premise of bringing the benefits of a painless transition as far as possible.

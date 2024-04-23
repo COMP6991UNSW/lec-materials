@@ -1,0 +1,28 @@
+In the field of software development, improving the security of programming languages has always been an important challenge. Recently, Bjarne Stroustrup, the founder of C++, proposed a progressive solution at the C++ Annual Conference, which is to introduce the "profiles" system. This article will discuss how this approach compares to widespread adoption of Rust, evaluate its advantages and disadvantages, and provide some suggestions for developers and organizations on their choices.
+Pros:
+
+1. Compatibility:
+   - Enables the gradual integration of safety measures into existing C++ codebases, preserving legacy systems.
+   - Addresses safety concerns without the need for a complete rewrite.
+2. Preserving Flexibility:
+   - Maintains the expressiveness and flexibility of C++, avoiding significant language restrictions.
+3. Performance Considerations:
+   - Aims to introduce safety without a decline in performance, potentially enhancing it.
+4. Static Analysis and Tooling:
+   - Leverages static analysis capabilities of modern C++ compilers, minimizing runtime overhead.
+5. Community Involvement:
+   - GitHub repository encourages community input, fostering collaborative refinement.
+
+Cons:
+1. Complexity and Learning Curve:
+   - Introducing a new "profiles" system may increase complexity and the learning curve.
+2. Incremental Adoption Challenges:
+   - Challenges in ensuring consistency and compatibility during gradual adoption.
+3. Limited Track Record:
+   - Effectiveness of the "profiles" system in real-world scenarios is unproven.
+4. Competition with Rust:
+   - Competes with Rust's growing popularity for safety, raising questions about comparative benefits.
+5. Resource Allocation:
+   - Developing a comprehensive "profiles" system requires substantial resources.
+
+Therefore, for a conlcusion, the gradual conversion to a "profiles" system in C++ offers a pragmatic approach to enhance safety in existing code. While aligning with C++'s evolutionary nature, challenges such as complexity and competition with Rust should be carefully considered. Organizations and developers need to weigh the benefits against potential drawbacks, evaluating whether this aligns with their priorities.

@@ -1,0 +1,28 @@
+[package]
+name = "exam_q5"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+path = "src/main.rs"
+name = "exam_q5"
+
+[[bin]]
+path = "src/main_odd_even.rs"
+name = "exam_q5_odd_even"
+
+[[bin]]
+path = "src/main_naughty_nice.rs"
+name = "exam_q5_naughty_nice"
+
+[[bin]]
+path = "src/main_duration.rs"
+name = "exam_q5_duration"
+
+[lib]
+path = "src/lib.rs"
+name = "exam_q5_lib"
+
+[dependencies]

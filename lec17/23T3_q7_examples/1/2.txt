@@ -1,0 +1,1 @@
+The adoption of profiles will inevitably break backwards compability for existing programs.

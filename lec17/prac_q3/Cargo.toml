@@ -1,0 +1,20 @@
+[package]
+name = "starter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "q3_1"
+path = "src/main_1.rs"
+
+[[bin]]
+name = "q3_2"
+path = "src/main_2.rs"
+
+[lib]
+name = "q3_lib"
+path = "src/lib.rs"
+
+[dependencies]

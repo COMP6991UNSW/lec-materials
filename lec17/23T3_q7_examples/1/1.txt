@@ -1,6 +1,0 @@
-1. Bjarne Stroustrup said some safety challenges in C++,
-such as resource leaks, overflows, memory corruption.
-In comparison, ownership and borrowing system for the rust
-avoid these problems properly. The rust also force to
-check these constraints at compile time, which entirely
-avoid these problems.

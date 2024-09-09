@@ -1,1 +1,0 @@
-Well, this way may be more effective and less time-consuming. It will take more time and energy to let developers use a new language. However, it may not provide all the safety guarantees like Rust.

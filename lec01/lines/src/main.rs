@@ -1,5 +1,4 @@
-use bmp::Image;
-use bmp::Pixel;
+use bmp::{Image, Pixel};
 
 const IMAGE_SIZE_PX: u32 = 256;
 
@@ -13,15 +12,18 @@ fn main() {
 
 	for x in 0..IMAGE_SIZE_PX {
 		for y in 0..IMAGE_SIZE_PX {
-			if (x + y) % 15 == 0 {
-				image.set_pixel(x, y, red);
-			} else if (x + y) % 15 == 5 {
-				image.set_pixel(x, y, green);
-			} else if (x + y) % 15 == 10 {
-				image.set_pixel(x, y, blue);
-			} else {
-				image.set_pixel(x, y, black);
-			}
+            let mod15 = (x + y) % 15;
+            let color = if mod15 == 0 {
+                red
+            } else if mod15 == 5 {
+                green
+            } else if mod15 == 10 {
+                blue
+            } else {
+                black
+            };
+
+            image.set_pixel(x, y, color);
 		}
 	}
 
@@ -30,5 +32,5 @@ fn main() {
 }
 
 fn create_pixel(r: u8, g: u8, b: u8) -> Pixel {
-	return Pixel::new(r, g, b);
+	Pixel::new(r, g, b)
 }

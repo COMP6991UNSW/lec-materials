@@ -1,0 +1,127 @@
+#![allow(unused)]
+
+struct Student {
+    name: String,
+    age: u32,
+    wam: Option<f64>,
+}
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+fn main() {
+
+
+
+
+
+
+
+    return;
+
+    let student = Student {
+        name: String::from("jeff"),
+        age: 42,
+        wam: Some(100.0),
+    };
+
+    
+    let Student { name, age, wam } = student;
+
+    let opt: Option<i32> = None;
+    if let Some(value) = opt {
+        // ... <value>
+    }
+    // value does not exist
+
+
+    println!("{age}");
+
+
+
+
+
+    let name = student.age;
+
+    let point: Point = Point { x: 2, y: 4 };
+    let other_point = (2, 4);
+
+    let array: [i32; 5] = [1, 2, 3, 4, 5];
+    let s = sum(array);
+
+    let _ = sum(array);
+
+    let (x, y) = (2, 4);
+    println!("{}", x * y);
+
+    let opt = Some(42);
+    match opt {
+        Some(100..102) => {
+
+        }
+        Some(value) => {
+            println!("{value}");
+        }
+        None => {}
+    }
+
+    let i = 4;
+    match i {
+        0 | 1 | 2 => {}
+        5 => {
+            println!("HELLO!");
+        }
+        value => {
+            println!("something else: {value}");
+        }
+    }
+}
+
+
+fn sum([a, b, c, d, e]: [i32; 5]) -> i32 {
+    a + b + c + d + e
+}
+
+
+
+fn find_the_mean(vec: Vec<i32>) -> f64 {
+    todo!()
+}
+
+
+
+fn find_the_median(vec: Vec<i32>) -> f64 {
+    todo!()
+}
+
+
+
+fn longest_equal_run_imperative(x: Vec<i32>, y: Vec<i32>) -> usize {
+    todo!()
+}
+
+
+
+fn longest_equal_run_functional(x: Vec<i32>, y: Vec<i32>) -> usize {
+    todo!()
+}
+
+
+
+fn longest_equal_run_mixed(x: Vec<i32>, y: Vec<i32>) -> usize {
+    todo!()
+}
+
+
+
+fn word_count(string: String) -> usize {
+    todo!()
+}
+
+
+
+fn find_the_mode(vec: Vec<i32>) -> i32 {
+    todo!()
+}

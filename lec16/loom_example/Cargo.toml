@@ -1,7 +1,0 @@
-[package]
-name = "loom_example"
-version = "0.1.0"
-edition = "2021"
-
-[target.'cfg(loom)'.dependencies]
-loom = "0.7"

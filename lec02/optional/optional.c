@@ -5,6 +5,8 @@
 #include <stdbool.h>
 
 // Create may return NULL in these circumstances:
+// - if b is true, then it will return non-NULL
+// - if b is false, then it will return NULL
 char *create(bool b) {
     if (b) {
         return "Hello there";
@@ -15,8 +17,8 @@ char *create(bool b) {
 
 int main(void) {
     // method 1
-    char *create_true = create(true);
-    if (create_true) {
+    char *create_true = create(false);
+    if (create_true != NULL) {
         printf("create(true) returned %s\n", create_true);
     } else {
         printf("create(true) returned <empty>\n");

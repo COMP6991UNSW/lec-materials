@@ -1,0 +1,18 @@
+[package]
+name = "lec07"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "my_library"
+path = "src/lib.rs"
+
+# [[bin]]
+# name = "my_binary"
+# path = "src/main.rs"
+
+# [[bin]]
+# name = "my_binary_two"
+# path = "src/main_two.rs"
+
+[dependencies]

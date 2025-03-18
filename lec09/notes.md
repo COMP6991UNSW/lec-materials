@@ -42,6 +42,8 @@
  
 ## 5. Interesting Traits
 
+We'll review all of these traits:
+
  - PartialEq / Eq
  - PartialOrd / Ord
  - Default
@@ -64,8 +66,8 @@
  - How to implement an iterator for arrays
 
 ## 7. Trait Objects
- - Understand how traits work
- - Identify that Traits must be in scope
+ - Understand what trait objects are, how they work
+ - Identify that Traits must be in scope to use them
  - Discuss the Trait Object Rules
  - Discuss the Self: Sized constraint
  - Constrast Traits with OOP

@@ -25,9 +25,9 @@
 
 ## 3. Sequences
 
- - Understand approaches to generalise to any number of types
- - Explore the possible edge cases with "any number of types" and approaches to fix this.
- - Implement our own return type to deal with edge cases of comparison.
+ - Understand approaches to generalise to any number of values
+ - Explore the possible edge cases with "any number of values" and approaches to fix this.
+ - Understand and use the Option type to deal with edge cases of comparison.
  - Discuss types as constraints, and types as arguments
  - How to make a function operating on a sequence more generic
  - Syntax in Rust
@@ -40,7 +40,7 @@
  - Discuss tradeoffs between the two
  
  
-## 3. Interesting Traits
+## 5. Interesting Traits
 
  - PartialEq / Eq
  - PartialOrd / Ord
@@ -58,18 +58,19 @@
  - Iterator, FromIterator, IntoIterator
  - Discuss how derive macros work
  
- 
-## 4. Building Our Own Iterator
+## 6. Building Our Own Iterator
  - How to implement a Fibonacci Iterator
+ - Why distinguish between "Iterator" and "IntoIterator"
  - How to implement an iterator for arrays
 
-## 5. Trait Objects
- - Traits must be in scope
+## 7. Trait Objects
  - Understand how traits work
- - Trait Object Rules
- - Self: Sized
+ - Identify that Traits must be in scope
+ - Discuss the Trait Object Rules
+ - Discuss the Self: Sized constraint
  - Constrast Traits with OOP
 
+ 
 ## Extra Content
 
  - The Orphan Rule

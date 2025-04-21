@@ -1,5 +1,22 @@
 1.
-
+Option<&str>
 2.
-
+Type inference
 3.
+The way predicted_result is assigned through
+the result variable being mutated is non-idiomatic.
+Improvement:
+
+let predicted_result = match (zid, wam) {
+	(_, wam) if wam >= 50 => Some("PS"),
+	(5205060, _) => Some("FL"),
+	_ => None,
+};
+
+let predicted_result = if wam >= 50 {
+	Some("PS")
+} else if zid == 5205060 {
+	Some("FL")
+} else {
+	None
+};

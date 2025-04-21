@@ -1,3 +1,12 @@
 1.
-
+Ownership.
+Ownership causes values to be moved,
+at which point the original cannot be used anymore.
+> Assigning string1 causes the first move,
+> and assigning string2 tries to move my_string a
+> second time, which causes the error.
 2.
+.clone()
+.as_ref()
+.as_str()
+.deref()

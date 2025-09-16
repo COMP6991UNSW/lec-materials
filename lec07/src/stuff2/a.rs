@@ -1,1 +1,0 @@
-pub struct Stuff2;

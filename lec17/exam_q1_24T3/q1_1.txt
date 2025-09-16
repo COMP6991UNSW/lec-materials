@@ -1,5 +1,0 @@
-Option<String>
-The Err(()) does not communicate
-any additional information than None
-from Option, so this is perfectly
-suitable or even an improvement!

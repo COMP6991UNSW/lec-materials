@@ -5,6 +5,18 @@ mod shared;
 mod exclusive;
 mod dangling;
 
+struct Student {
+    name: String,
+    zid: u32, // 5555555
+    wam: Option<f64>, // 95.3
+}
+
+impl Drop for Student {
+    fn drop(&mut self) {
+        println!("student is being dropped now!!");
+    }
+}
+
 #[derive(Copy, Clone)]
 struct Point {
     x: i32,
@@ -21,9 +33,26 @@ fn print_point(point: Point) {
 
 struct OwnedI32(i32);
 
+fn takes_ownership(student: Student) {
+    // ...
+}
+
 fn main() {
+    let name = String::from("zac");
+    let mut student = Student {
+        name,
+        zid: 5555555,
+        wam: Some(13.5),
+    };
+
+    let name_borrow = &mut student.name;
+    let zid_borrow  = &mut student.zid;
+    // let student_borrow = &mut student;
+
+    println!("student name is {name_borrow} and zid is {zid_borrow}");
+
     let mut x = String::from("hello");
-    
+
     let shared_borrow_1 = &x;
     let shared_borrow_2 = &x;
     let shared_borrow_3 = shared_borrow_1;
@@ -36,9 +65,10 @@ fn main() {
 
 
     let exclusive_borrow_1 = &mut x;
+    let exclusive_borrow_2 = exclusive_borrow_1;
     // let exclusive_borrow_2 = &mut x; // DOESN'T WORK!!!
 
-    println!("{exclusive_borrow_1}");
+    println!("{exclusive_borrow_2}");
 
     // let mut y = x.clone();
 

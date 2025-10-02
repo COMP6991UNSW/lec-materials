@@ -14,8 +14,9 @@
 ///
 /// assert_eq!(s, "TEST!!!");
 /// ```
-fn emphasize(string: String) {
-    todo!()
+fn emphasize(string: &mut String) {
+    string.make_ascii_uppercase();
+    string.push_str("!!!");
 }
 
 
@@ -25,7 +26,6 @@ fn emphasize(string: String) {
 
 
 
-/*
 
 #[cfg(test)]
 mod tests {
@@ -70,4 +70,3 @@ mod tests {
     }
 }
 
-*/

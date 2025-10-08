@@ -1,0 +1,12 @@
+cards_played:
+  - A♥
+  - K♠
+  - J♦
+  - 9♣
+  - 7♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Shortcut
+  - Four Fingers 

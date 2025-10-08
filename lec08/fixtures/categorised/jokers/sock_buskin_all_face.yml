@@ -1,0 +1,11 @@
+cards_played:
+  - K♥
+  - K♠
+  - Q♦
+  - J♣
+  - J♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Sock And Buskin 

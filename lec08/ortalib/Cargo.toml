@@ -1,0 +1,13 @@
+[package]
+name = "ortalib"
+version = "1.1.0"
+edition = "2024"
+description = "A support library for cs6991's ortalab"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+enum-iterator = "2.1.0"
+serde = { version = "1.0.204", features = ["derive"] }
+
+[dev-dependencies]
+serde_yaml = "0.9.34"

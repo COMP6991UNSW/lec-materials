@@ -1,0 +1,11 @@
+cards_played:
+  - 10♥
+  - 8♠
+  - 6♦
+  - 4♣
+  - 2♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Even Steven 

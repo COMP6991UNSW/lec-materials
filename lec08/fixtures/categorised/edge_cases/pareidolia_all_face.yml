@@ -1,0 +1,13 @@
+cards_played:
+  - 10♥
+  - 9♠
+  - 8♦
+  - 7♣
+  - 6♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Pareidolia
+  - Scary Face
+  - Smiley Face 

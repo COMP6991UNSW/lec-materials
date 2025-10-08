@@ -1,0 +1,11 @@
+cards_played:
+  - A♥
+  - 4♠
+  - 5♦
+  - 7♣
+  - 8♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Fibonacci 

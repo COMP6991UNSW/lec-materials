@@ -1,0 +1,10 @@
+cards_played:
+  - 8♥
+  - 7♠
+  - 6♦
+  - 5♣
+  - 4♥
+
+cards_held_in_hand: []
+
+jokers: [] 

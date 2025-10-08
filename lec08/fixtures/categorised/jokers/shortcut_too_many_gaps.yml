@@ -1,0 +1,11 @@
+cards_played:
+  - A♥
+  - K♠
+  - J♦
+  - 8♣
+  - 5♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Shortcut 

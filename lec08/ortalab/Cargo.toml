@@ -1,0 +1,17 @@
+[package]
+name = "ortalab"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "my_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ortalab"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5.9", features = ["derive"] }
+ortalib = "1.0.0"
+serde_yaml = "0.9.34"

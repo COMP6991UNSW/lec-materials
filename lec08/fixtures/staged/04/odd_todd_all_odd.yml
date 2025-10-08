@@ -1,0 +1,11 @@
+cards_played:
+  - A♥
+  - 9♠
+  - 7♦
+  - 5♣
+  - 3♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Odd Todd 

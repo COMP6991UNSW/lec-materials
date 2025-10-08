@@ -1,0 +1,17 @@
+cards_played:
+  - 10♥
+  - 10♠
+  - 10♦
+  - A♣
+  - J♥
+
+cards_held_in_hand:
+  - 2♥
+  - 5♦
+  - 9♦
+
+jokers:
+  - Joker
+  - Mad Joker
+  - Zany Joker
+  - Raised Fist

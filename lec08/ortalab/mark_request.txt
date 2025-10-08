@@ -1,0 +1,52 @@
+# Ortalab Mark Request
+
+## Which stages are complete?
+
+Please mark stages that are complete with an [X].
+Stages that are partially complete should be marked with a [?].
+Stages that are not complete should be left blank (like [ ]).
+
+> [ ] Stage 1 (Basic Scoring)
+> [ ] Stage 2 (Modifiers)
+> [ ] Stage 3 (Easy Jokers)
+> [ ] Stage 4 (Medium Jokers)
+> [ ] Stage 5 (Hard Jokers)
+
+## Design Excellence
+
+If you have completed a "design excellence" task, please write what
+the task was below (note, it MUST be on the list in the assignment or
+approved by COMP6991 staff).
+
+>
+
+Please write a paragraph or two (max. 250 words) describing how your design was
+influenced by this challenge, with specific reference to sections of your code.
+If you completed the "Pull Request" design excellence, please just leave a link
+to your PR.
+
+>
+>
+>
+
+## Design Limitations
+
+If you made any design decisions which you now regret making; but don't to go back and change them,
+let us know here. You can make up your design marks by acknowledging up to 5 things you would do
+differently now.
+
+> - TODO
+
+## Questions to the marker
+
+If you want to let us know something else about your program, put it here!
+(Feel free to leave this blank)
+
+> TODO
+
+## Other Comments
+
+If you want to let us know something else about your program, put it here!
+(Feel free to leave this blank)
+
+> TODO

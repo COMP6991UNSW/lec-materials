@@ -1,0 +1,11 @@
+cards_played:
+  - A♥ Bonus
+  - K♠ Mult
+  - Q♦ Glass
+  - J♣ Wild
+  - 10♥ Steel
+
+cards_held_in_hand:
+  - 9♠ Steel
+
+jokers: [] 

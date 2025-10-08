@@ -1,0 +1,16 @@
+cards_played:
+  - A♥
+  - A♠
+  - A♦
+  - A♣
+  - 10♥
+
+cards_held_in_hand:
+  - K♠
+
+jokers:
+  - Joker
+  - Jolly Joker
+  - Zany Joker
+  - Abstract Joker
+  - Baron 

@@ -1,0 +1,17 @@
+cards_played:
+  - K♥
+  - Q♠
+  - J♦
+  - 10♣
+  - 9♥
+
+cards_held_in_hand:
+  - K♠
+  - Q♣
+
+jokers:
+  - Sock And Buskin
+  - Scary Face
+  - Smiley Face
+  - Mime
+  - Baron 

@@ -1,0 +1,11 @@
+cards_played:
+  - K♥
+  - Q♠
+  - J♦
+  - 5♣
+  - 2♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Four Fingers 

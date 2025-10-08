@@ -1,0 +1,11 @@
+cards_played:
+  - Q♥
+  - Q♠
+  - 9♦
+  - 5♣
+  - 5♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Mad Joker 

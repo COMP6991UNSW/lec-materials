@@ -1,0 +1,13 @@
+cards_played:
+  - A♥
+  - Q♠
+  - J♦
+  - 10♣
+  - 9♥
+
+cards_held_in_hand:
+  - Q♣
+  - J♠
+
+jokers:
+  - Baron 

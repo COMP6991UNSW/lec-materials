@@ -1,0 +1,11 @@
+cards_played:
+  - A♥
+  - 10♠
+  - 9♦
+  - 8♣
+  - 7♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Smiley Face 

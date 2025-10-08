@@ -1,0 +1,11 @@
+cards_played:
+  - 9♥
+  - 8♠
+  - 7♦
+  - 6♣
+  - 5♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Crafty Joker 

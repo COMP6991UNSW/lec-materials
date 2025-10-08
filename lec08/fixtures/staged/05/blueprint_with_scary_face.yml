@@ -1,0 +1,12 @@
+cards_played:
+  - K♥
+  - Q♠
+  - J♦
+  - 10♣
+  - 9♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Blueprint
+  - Scary Face

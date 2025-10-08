@@ -1,0 +1,12 @@
+cards_played:
+  - K♥
+  - K♠
+  - K♦
+  - Q♣
+  - Q♥
+
+cards_held_in_hand: []
+
+jokers:
+  - Sock And Buskin
+  - Scary Face 

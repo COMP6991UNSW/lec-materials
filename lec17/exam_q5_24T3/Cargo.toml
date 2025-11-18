@@ -1,0 +1,28 @@
+[package]
+name = "exam_q5_24T3"
+version = "0.1.0"
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+path = "src/main.rs"
+name = "exam_q5"
+
+[[bin]]
+path = "src/main_alt.rs"
+name = "exam_q5_alt"
+
+[[bin]]
+path = "src/main_alt2.rs"
+name = "exam_q5_alt2"
+
+[[bin]]
+path = "src/main_alt3.rs"
+name = "exam_q5_alt3"
+
+[lib]
+path = "src/lib.rs"
+name = "exam_q5_lib"
+
+[dependencies]

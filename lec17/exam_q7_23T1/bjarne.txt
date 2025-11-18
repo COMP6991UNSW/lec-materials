@@ -1,0 +1,40 @@
+[ in response to the NSA information sheet ]
+
+That specifically and explicitly excludes C and C++ as unsafe. As is far too
+common, it lumps C and C++ into the single category C/C++, ignoring 30+ years of
+progress. Unfortunately, much C++ use is also stuck in the distant past, ignoring
+improvements, including ways of dramatically improving safety.
+
+Now, if I considered any of those "safe" languages superior to C++ for the range of
+uses I care about, I wouldn't consider the fading out of C/C++ as a bad thing, but
+that's not the case. Also, as described, "safe" is limited to memory safety, leaving
+out on the order of a dozen other ways that a language could (and will) be used to
+violate some form of safety and security.
+
+[...]
+
+There is not just one definition of "safety", and we can achieve a variety of kinds of
+safety through a combination of programming styles, support libraries, and enforcement
+through static analysis. [C++ language proposal P2410r0] gives a brief summary of
+the approach. I envision compiler options and code annotations for requesting rules
+to be enforced. The most obvious would be to request guaranteed full type-and-resource
+safety. [C++ language proposal P2687R0] is a start on how the standard can support this,
+R1 will be more specific. Naturally, comments and suggestions are most welcome.
+
+Not everyone prioritizes "safety" above all else. For example, in application domains
+where performance is the main concern, the [C++ language proposal P2687R0] approach
+lets you apply the safety guarantees only where required and use your favorite tuning
+techniques where needed. Partial adoption of some of the rules (e.g., rules for range
+checking and initialization) is likely to be important. Gradual adoption of safety
+rules and adoption of differing safety rules will be important. If for no other reason
+than the billions of lines of C++ code will not magically disappear, and even "safe"
+code (in any language) will have to call traditional C or C++ code or be called by
+traditional code that does not offer specific safety guarantees.
+
+Ignoring the safety issues would hurt large sections of the C++ community and undermine
+much of the other work we are doing to improve C++. So would focusing exclusively
+on safety.
+
+What might "something sensible to do" be? I suggest making a list of issues that could
+be considered safety issues (including UB) and finding ways of preventing them within
+the framework of [C++ language proposal P2687R0]. That's what I plan to do.

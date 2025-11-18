@@ -1,0 +1,15 @@
+[package]
+name = "cars"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+path = "src/favourite.rs"
+name = "favourite"
+
+[lib]
+path = "src/cars.rs"
+name = "cars"
+
+
+[dependencies]

@@ -1,0 +1,15 @@
+[package]
+name = "channel"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+path = "src/main.rs"
+name = "exam_q6"
+
+[lib]
+path = "src/lib.rs"
+name = "exam_q6_lib"
+
+
+[dependencies]

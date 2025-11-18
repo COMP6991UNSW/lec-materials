@@ -1,0 +1,20 @@
+[package]
+name = "exam_q2_24T3"
+version = "0.1.0"
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+path = "src/main.rs"
+name = "exam_q2"
+
+[lib]
+path = "src/lib.rs"
+name = "exam_q2_lib"
+
+[dependencies]
+
+[features]
+find_str_bad_lifetimes = []
+most_common_bad_lifetimes = []

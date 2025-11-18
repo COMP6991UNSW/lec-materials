@@ -1,0 +1,14 @@
+Should I learn Rust?
+
+Yes, if the following is true for you:
+* I desire to become a really great software developer in a modern language capable of productively developing any type of software system
+* I routinely need to develop software with compact memory use without being restricted to using a subset of the total language (e.g. like with C++)
+* I need to develop performant software, particularly on a single CPU core (but not limited to a single core)
+* I need to develop correct and memory-safe software without worry and prefer or require a runtime without a garbage collector
+* I've mastered another language and I'm looking for a new challenge
+
+No (or maybe), if the following is true for you:
+* To date, I've never (or hardly) developed any software
+* I need to rapidly prototype a new concept to find product-market-fit on my own or at a startup company
+* I'm not willing or curious enough to persist when certain Rust concepts become challenging
+* I have no interest or need to learn how memory management works for the type of software I want to develop

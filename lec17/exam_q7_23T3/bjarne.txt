@@ -1,0 +1,77 @@
+# Bjarne Stroustrup's plan for bringing safety to C++
+
+Published by The New Stack, by David Cassel
+
+The 72-year-old creator of C++, [Bjarne Stroustrup,] gave a forward-looking
+keynote address last month as the programming language’s annual convention.
+
+...
+
+Early in the presentation, Stroustrup shared a slide titled “Safety is not just
+type safety,” highlighting everything from resource leaks and overflows to
+memory corruption and timing errors. There’s concurrency errors, termination
+errors — and of course, type errors. “Often the safety mentioned is just memory
+safety — that’s not enough… And the need to interoperate with other languages,
+including C++ and C, tend not to be mentioned. And the cost of conversion can be
+ferocious. That’s rarely mentioned…”
+
+“And anyway — which other language? The way I have seen it argued, we are going
+to have C++ replaced by about seven different languages, as of suggestions of
+about now. By the time it happens — 40 years from now — we’ll probably have 20
+different ones, and they have to interoperate. This is going to be difficult.”
+
+Elsewhere in the talk Stroustrup also points out that “A lot of the so-called
+‘safe’ languages outsource all the low-level stuff to C or C++,” temporarily
+escaping the original language to access hardware resources or even the
+operating system (which is often written in C) — or even “trusted code” which
+may actually be very old, tucked away in an external library… or written in an
+entirely different programming language.
+
+As Stroustrup sees it, “This idea of just building a new system over on the
+side, without any of the problems of the old one, is a fantasy. But it’s a very
+popular fantasy.”
+
+...
+
+So about 54 minutes into the talk, Stroustrup told his audience, “Now I want to
+get to future stuff: where do we go from here…? ”
+
+...
+
+Stroustrup has arrived at his solution: profiles. (That is, a set of rules
+which, when followed, achieve specific safety guarantees.)
+...
+Stroustrup lays out the general strategy: using static analysis to eliminate
+potential errors. But “Global static analysis is just unaffordable,” Stroustrup
+adds. “So basically we need rules to simplify what we are writing to something
+that can be analyzed efficiently and cheaply — local static analysis… And then
+provide libraries to make relying on these rules feasible.”
+
+One slide also noted another advantage: that “Gradual conversion from older code
+to modern code offering guarantees is supported. The slide emphasized that
+there’ll be a standard “fundamental” set of guarantees, with a larger, open
+universe of available guarantees. Stroustrup says “I’m imagining type- and
+resource-safety, memory safety, range safety. Arithmetic safety, things like
+that, could be standardized.” And there will also be rules for applying
+different guarantees to different fragments of code.
+
+Code could even gets explicit expressions of which guarantees were applied (thus
+reassuring future readers). Stroustrup again put up his slide listing the “many
+notions of safety” — a slide titled “Safety is not just type safety,”
+highlighting resource leaks, overflows, memory corruption, timing errors,
+concurrency errors, termination errors — and of course, type errors.
+
+One slide succinctly makes the case: “Being careful” doesn’t scale. So while the
+core guidelines may suggest safe coding practices, “We need enforced rules.” As
+Stroustrup puts it, “We have to formulate the rules for safe use. We have to
+provide ways of verifying that people actually do what they’re trying to do.”
+Stroustrup points out that much of what he’s describing has already been tried,
+even at scale. “But nowhere has it all been integrated into a consistent,
+coherent whole. And that’s what I’m arguing we should do.”
+
+One slide lays out the formula in six words: hygiene rules + static analysis +
+run-time checks. Stroustrup put up a slide saying C++ can eliminate many common
+errors — including uninitialized variables, range errors, null pointer
+dereferencing, resource leaks, and dangling references.
+
+[End of excerpt]

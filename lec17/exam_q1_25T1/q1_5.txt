@@ -1,7 +1,0 @@
-Feature 1:
-Explicit lifetime annotations in Rust
-Memory safety without a GC
-
-Feature 2:
-Statically annotated types
-For careful memory layout and performance

@@ -1,7 +1,0 @@
-All commands are cargo
-
-Command 1: new nyancat
-
-Command 2: add bmp
-
-Command 3: run

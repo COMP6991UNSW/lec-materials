@@ -18,7 +18,7 @@ mod unsafe_race;
 // Waiting for some resource or time: blocking (your thread is blocked)
 
 fn main() {
-    concurrency_example_2();
+    // concurrency_example_2();
 
     // data_race::attempt1::main();
     // data_race::attempt2::main();

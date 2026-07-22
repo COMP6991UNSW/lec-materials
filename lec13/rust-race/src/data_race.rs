@@ -123,14 +123,30 @@ pub mod attempt3 {
 
 #[cfg(any())]
 pub mod attempt4 {
-    use std::{thread, array, cell::Cell, sync::{atomic::{AtomicU64, Ordering}, Mutex}};
+    use std::{array, cell::Cell, ops::DerefMut, rc::Rc, sync::{Arc, Mutex, atomic::{AtomicU64, Ordering}}, thread::{self, sleep}, time::Duration};
 
     use super::*;
 
     fn thread(my_number: &Mutex<u64>) {
         for _ in 0..N_INCREMENTS {
-            *my_number.lock().unwrap() += 1;
+            let mut guard = my_number.lock().unwrap();
+            *guard += 1;
         }
+    }
+
+    fn hello() {
+        let my_string_1 = Arc::new(String::from("hello"));
+        let my_string_2 = Arc::clone(&my_string_1);
+
+        std::thread::spawn(move || {
+            sleep(Duration::from_secs(10));
+            println!("{my_string_1}");
+            drop(my_string_1);
+        });
+
+        sleep(Duration::from_secs(3));
+        println!("{my_string_2}");
+        drop(my_string_2);
     }
 
     pub fn main() {
@@ -200,7 +216,7 @@ pub mod attempt4fix1 {
 
 
 
-#[cfg(any())]
+#[cfg(all())]
 pub mod attempt4fix2 {
     use std::{array, cell::Cell, sync::{atomic::{AtomicU64, Ordering}, Arc, Mutex}, thread::{self, sleep}, time::Duration};
 
@@ -238,7 +254,7 @@ pub mod attempt4fix2 {
 
 
 
-#[cfg(any())]
+#[cfg(all())]
 pub mod attempt5 {
     use std::{array, cell::Cell, sync::atomic::{AtomicU64, Ordering}};
 

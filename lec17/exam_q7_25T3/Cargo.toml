@@ -1,0 +1,6 @@
+[package]
+name = "exam_q7_25T3"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

@@ -1,0 +1,24 @@
+[package]
+name = "exam_q5_25T3"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+path = "src/main.rs"
+name = "exam_q5_25T3"
+
+[[bin]]
+path = "src/main_alt.rs"
+name = "exam_q5_25T3_alt"
+
+[[bin]]
+path = "src/main_alt2.rs"
+name = "exam_q5_25T3_alt2"
+
+[[bin]]
+path = "src/main_alt3.rs"
+name = "exam_q5_25T3_alt3"
+
+[lib]
+path = "src/lib.rs"
+name = "exam_q5_25T3_lib"
